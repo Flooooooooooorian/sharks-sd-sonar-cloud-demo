@@ -11,4 +11,10 @@ describe("calc", () => {
   test("gives vip customers 15 % off", () => {
     expect(calc([{ name: "Lamp", price: 100, quantity: 1 }], "vip")).toBe(85);
   });
+
+  test("gives none vip customers 15 % off", () => {
+    expect(calc([{ name: "Lamp", price: 100, quantity: 1 }], "member")).toBe(
+      85,
+    );
+  });
 });
